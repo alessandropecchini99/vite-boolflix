@@ -20,11 +20,11 @@ export default {
 <template>
   <header>
     <div class="navbar">
-      <h1 @click="home">BOOLFLIX</h1>
+      <img @click="home" src="../assets/logo.png" alt="logo" />
       <div class="search">
-        <span v-if="this.store.checkSearch == false" class="alert"
-          >Inserisci un titolo!</span
-        >
+        <span v-if="this.store.checkSearch == false" class="alert">
+          Inserisci un titolo!
+        </span>
         <div class="bordo">
           <input
             type="text"
@@ -53,9 +53,9 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    h1 {
-      color: rgb(195, 0, 0);
+    img {
       cursor: pointer;
+      height: 50px;
     }
 
     .search {

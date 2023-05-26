@@ -82,7 +82,9 @@ export default {
   }
 
   img {
-    transition: 0.2s ease;
+    transition: 0.4s ease;
+    height: 513px;
+    width: 342px;
   }
 
   .info {
@@ -93,7 +95,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
 
     div {
       padding-top: 8px;
@@ -101,7 +103,7 @@ export default {
   }
 
   &:hover img {
-    opacity: 0;
+    opacity: 0.1;
   }
 
   &:hover .info {
