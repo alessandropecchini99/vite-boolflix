@@ -22,13 +22,13 @@ export default {
     film trovati: {{ store.arrFilm.length }} - tv series trovate:
     {{ store.arrTv.length }}
   </div>
-  <div class="containerFilm">
-    <h4>FILM</h4>
+  <h4>FILM</h4>
+  <div class="container">
     <listFilm v-for="film in store.arrFilm" :key="film.id" :filmData="film" />
   </div>
 
-  <div class="containerTv">
-    <h4>Tv Series</h4>
+  <h4>Tv Series</h4>
+  <div class="container">
     <listTv v-for="tv in store.arrTv" :key="tv.id" :tvData="tv" />
   </div>
 </template>
@@ -38,14 +38,11 @@ export default {
 .info {
   @include myContainer;
 }
-.containerFilm {
+.container {
   background-color: rgb(177, 177, 177);
   display: flex;
+  gap: 0.2em;
   overflow-x: auto;
-}
-.containerTv {
-  background-color: rgb(133, 133, 133);
-  display: flex;
-  overflow-x: auto;
+  padding-left: 1em;
 }
 </style>
