@@ -4,4 +4,5 @@ export const store = reactive({
   arrFilm: [],
   arrTv: [],
   searchFilm: ``,
+  checkSearch: true,
 });

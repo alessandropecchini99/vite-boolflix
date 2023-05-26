@@ -60,6 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  cursor: default;
   height: 513px;
   background-color: black;
   margin-bottom: 2em;

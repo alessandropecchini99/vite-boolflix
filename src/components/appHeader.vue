@@ -10,6 +10,9 @@ export default {
     onSearch() {
       this.$emit(`performSearch`);
     },
+    home() {
+      this.$emit(`mainHome`);
+    },
   },
 };
 </script>
@@ -17,11 +20,14 @@ export default {
 <template>
   <header>
     <div class="navbar">
-      <h1>BOOLFLIX</h1>
-      <div>
+      <h1 @click="home">BOOLFLIX</h1>
+      <div class="search">
+        <span v-if="this.store.checkSearch == false" class="alert"
+          >Inserisci un titolo!</span
+        >
         <input
           type="text"
-          placeholder="Cerca un film"
+          placeholder="Cerca un film o una serie"
           v-model="store.searchFilm"
           @keyup.enter="onSearch"
         />
@@ -36,7 +42,8 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: black;
-  height: 6vh;
+  height: 8vh;
+
   .navbar {
     width: 90%;
     height: 100%;
@@ -47,9 +54,18 @@ header {
 
     h1 {
       color: rgb(195, 0, 0);
+      cursor: pointer;
     }
 
-    div {
+    .search {
+      display: flex;
+      align-items: center;
+
+      .alert {
+        color: red;
+        margin-right: 10px;
+      }
+
       input {
         outline: none;
         border: 0;
@@ -61,6 +77,7 @@ header {
         color: white;
         border: 0px;
         padding: 5px;
+        cursor: pointer;
         &:hover {
           background-color: rgb(146, 0, 0);
         }

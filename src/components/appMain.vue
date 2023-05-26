@@ -37,30 +37,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.background {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(68, 68, 68, 1) 8%,
-    rgba(113, 113, 113, 1) 74%,
-    rgba(142, 142, 142, 1) 100%
-  );
+h3 {
+  padding-top: 3em;
+  padding-bottom: 0.5em;
+  margin-left: 1em;
+  font-weight: 400;
+}
 
-  h3 {
-    padding-top: 3em;
-    padding-bottom: 0.5em;
-    margin-left: 1em;
-    font-weight: 400;
-  }
-
-  .container {
-    display: flex;
-    gap: 0.2em;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-    padding-left: 1em;
-  }
+.container {
+  display: flex;
+  gap: 0.05em;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  padding-left: 1em;
 }
 </style>
