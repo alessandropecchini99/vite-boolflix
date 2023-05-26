@@ -69,7 +69,7 @@ header {
       }
 
       .bordo {
-        border: 1px rgb(195, 0, 0) solid;
+        border: 2px rgb(195, 0, 0) solid;
         input {
           outline: none;
           border: 0;
