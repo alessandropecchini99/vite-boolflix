@@ -74,6 +74,8 @@ header {
           outline: none;
           border: 0;
           padding: 5px;
+          background-color: black;
+          color: white;
         }
 
         button {
