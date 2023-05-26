@@ -58,6 +58,8 @@ export default {
     display: flex;
     gap: 0.2em;
     overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
     padding-left: 1em;
   }
 }
