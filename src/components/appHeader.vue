@@ -43,7 +43,6 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: black;
   height: 8vh;
 
   .navbar {
