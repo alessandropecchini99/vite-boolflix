@@ -18,31 +18,47 @@ export default {
 </script>
 
 <template>
-  <div class="info">
-    film trovati: {{ store.arrFilm.length }} - tv series trovate:
-    {{ store.arrTv.length }}
-  </div>
-  <h4>FILM</h4>
-  <div class="container">
-    <listFilm v-for="film in store.arrFilm" :key="film.id" :filmData="film" />
-  </div>
+  <div class="background">
+    <h3>FILM</h3>
+    <div class="container">
+      <listFilm
+        v-for="film in store.arrFilm"
+        :key="film.id"
+        :filmData="film"
+        class="prova"
+      />
+    </div>
 
-  <h4>Tv Series</h4>
-  <div class="container">
-    <listTv v-for="tv in store.arrTv" :key="tv.id" :tvData="tv" />
+    <h3>SERIE TV</h3>
+    <div class="container">
+      <listTv v-for="tv in store.arrTv" :key="tv.id" :tvData="tv" />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-@use "./../assets/variables.scss" as *;
-.info {
-  @include myContainer;
-}
-.container {
-  background-color: rgb(177, 177, 177);
-  display: flex;
-  gap: 0.2em;
-  overflow-x: auto;
-  padding-left: 1em;
+.background {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(68, 68, 68, 1) 8%,
+    rgba(113, 113, 113, 1) 74%,
+    rgba(142, 142, 142, 1) 100%
+  );
+
+  h3 {
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    font-weight: 400;
+  }
+
+  .container {
+    display: flex;
+    gap: 0.2em;
+    overflow-x: auto;
+    padding-left: 1em;
+  }
 }
 </style>

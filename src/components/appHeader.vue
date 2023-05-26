@@ -34,13 +34,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "./../assets/variables.scss" as *;
-
 header {
   background-color: black;
   height: 6vh;
   .navbar {
-    @include myContainer;
+    width: 90%;
+    height: 100%;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
