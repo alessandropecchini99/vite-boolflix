@@ -25,15 +25,17 @@ export default {
         <span v-if="this.store.checkSearch == false" class="alert"
           >Inserisci un titolo!</span
         >
-        <input
-          type="text"
-          placeholder="Cerca un film o una serie"
-          v-model="store.searchFilm"
-          @keyup.enter="onSearch"
-        />
-        <button @click="onSearch">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <div class="bordo">
+          <input
+            type="text"
+            placeholder="Cerca un film o una serie"
+            v-model="store.searchFilm"
+            @keyup.enter="onSearch"
+          />
+          <button @click="onSearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -66,20 +68,20 @@ header {
         margin-right: 10px;
       }
 
-      input {
-        outline: none;
-        border: 0;
-        padding: 5px;
-      }
+      .bordo {
+        border: 1px rgb(195, 0, 0) solid;
+        input {
+          outline: none;
+          border: 0;
+          padding: 5px;
+        }
 
-      button {
-        background-color: rgb(195, 0, 0);
-        color: white;
-        border: 0px;
-        padding: 5px;
-        cursor: pointer;
-        &:hover {
-          background-color: rgb(146, 0, 0);
+        button {
+          background-color: rgb(195, 0, 0);
+          color: white;
+          border: 0;
+          padding: 5px 10px;
+          cursor: pointer;
         }
       }
     }

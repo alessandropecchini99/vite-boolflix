@@ -1,7 +1,7 @@
 <script>
 // FEATURES AGGIUNTIVE:
 // 1- il logo riporta alla home e pulisce l'input
-// 2- l'input non accetta un valore nuovo o con solo spazi
+// 2- l'input non accetta un valore vuoto o con solo spazi
 
 import appHeader from "./components/appHeader.vue";
 import appMain from "./components/appMain.vue";
@@ -89,10 +89,7 @@ export default {
 
 <template>
   <appHeader @performSearch="loadApi" @mainHome="returnHome" />
-
-  <main>
-    <appMain />
-  </main>
+  <appMain />
 </template>
 
 <style lang="scss">

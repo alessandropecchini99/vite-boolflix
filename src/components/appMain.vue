@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div class="background">
+  <main>
     <h3>FILM</h3>
     <div class="container">
       <listFilm
@@ -33,23 +33,25 @@ export default {
     <div class="container">
       <listTv v-for="tv in store.arrTv" :key="tv.id" :tvData="tv" />
     </div>
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-h3 {
-  padding-top: 3em;
-  padding-bottom: 0.5em;
-  margin-left: 1em;
-  font-weight: 400;
-}
+main {
+  h3 {
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    font-weight: 400;
+  }
 
-.container {
-  display: flex;
-  gap: 0.05em;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-  padding-left: 1em;
+  .container {
+    display: flex;
+    gap: 0.05em;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    padding-left: 1em;
+  }
 }
 </style>

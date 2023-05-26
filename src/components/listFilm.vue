@@ -42,7 +42,7 @@ export default {
       </div>
       <!-- lingua -->
       <div>
-        <span>Lingua: </span>
+        <span>Lingua originale: </span>
         <langFlag :iso="filmData.original_language" />
       </div>
       <!-- score -->
@@ -94,6 +94,10 @@ export default {
     left: 0;
     right: 0;
     transition: 0.3s ease;
+
+    div {
+      padding-top: 8px;
+    }
   }
 
   &:hover img {

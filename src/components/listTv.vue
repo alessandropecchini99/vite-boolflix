@@ -29,14 +29,17 @@ export default {
     <img
       v-if="tvData.poster_path"
       :src="`https://image.tmdb.org/t/p/w342` + tvData.poster_path"
-      :alt="tvData.title"
+      :alt="tvData.name"
     />
     <img v-else src="../assets/missing.png" alt="" />
+    <!-- classe delle info -->
     <div class="info">
       <!-- titolo tradotto -->
       <div>Titolo: {{ tvData.name }}</div>
       <!-- titolo originale -->
-      <div>Titolo originale: {{ tvData.original_name }}</div>
+      <div v-show="tvData.original_name !== tvData.name">
+        Titolo originale: {{ tvData.original_name }}
+      </div>
       <!-- lingua originale -->
       <div>
         <span>Lingua :</span>
@@ -45,10 +48,18 @@ export default {
       <!-- score -->
       <div>
         <span>Score: </span>
-        <span v-for="index in starScore(tvData.vote_average)" :key="index">
+        <span
+          class="stars"
+          v-for="index in starScore(tvData.vote_average)"
+          :key="index"
+        >
           <i class="fa-solid fa-star"></i>
         </span>
-        <span v-for="index in 5 - starScore(tvData.vote_average)" :key="index">
+        <span
+          class="stars"
+          v-for="index in 5 - starScore(tvData.vote_average)"
+          :key="index"
+        >
           <i class="fa-regular fa-star"></i>
         </span>
       </div>
@@ -77,11 +88,16 @@ export default {
   .info {
     opacity: 0;
     padding: 1em;
+    font-size: 1.2em;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     transition: 0.3s ease;
+
+    div {
+      padding-top: 8px;
+    }
   }
 
   &:hover img {
