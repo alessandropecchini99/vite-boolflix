@@ -103,7 +103,7 @@ export default {
   }
 
   &:hover img {
-    opacity: 0.1;
+    opacity: 0.15;
   }
 
   &:hover .info {
