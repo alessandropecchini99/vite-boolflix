@@ -45,7 +45,6 @@ export default {
             },
           })
           .then((response) => (this.store.arrTv = response.data.results));
-        console.log(store.arrFilm);
         store.checkSearch = true;
       }
     },
@@ -65,6 +64,7 @@ export default {
         })
         .then((response) => (this.store.arrTv = response.data.results));
       store.searchFilm = ``;
+      store.checkSearch = true;
     },
   },
   created() {

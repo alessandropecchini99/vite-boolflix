@@ -74,7 +74,7 @@ export default {
   cursor: default;
   height: 513px;
   background-color: black;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   position: relative;
 
   .stars {
