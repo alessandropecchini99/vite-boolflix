@@ -19,7 +19,11 @@ export default {
 
 <template>
   <main>
-    <h3>FILM</h3>
+    <h2 v-if="store.arrFilm.length === 0 && store.arrTv.length === 0">
+      OPS... NON ABBIATO TROVATO QUELLO CHE CERCHI
+    </h2>
+
+    <h3 v-show="store.arrFilm != ``">FILM</h3>
     <div class="container">
       <listFilm
         v-for="film in store.arrFilm"
@@ -29,7 +33,7 @@ export default {
       />
     </div>
 
-    <h3>SERIE TV</h3>
+    <h3 v-show="store.arrTv != ``">SERIE TV</h3>
     <div class="container">
       <listTv v-for="tv in store.arrTv" :key="tv.id" :tvData="tv" />
     </div>
@@ -38,6 +42,17 @@ export default {
 
 <style lang="scss" scoped>
 main {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+
+  h2 {
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-weight: 400;
+  }
+
   h3 {
     padding-top: 3em;
     padding-bottom: 0.5em;
@@ -52,6 +67,10 @@ main {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     padding-left: 1em;
+  }
+
+  .container::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>
