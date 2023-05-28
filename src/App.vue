@@ -2,6 +2,8 @@
 // FEATURES AGGIUNTIVE:
 // 1- il logo riporta alla home e pulisce l'input
 // 2- l'input non accetta un valore vuoto o con solo spazi
+// 3- viene mostrata un'immagine placeholder in caso manchi la locandina
+// 4- se non vengono tovati film viene comunicato che non si è trovato nulla
 
 import appHeader from "./components/appHeader.vue";
 import appMain from "./components/appMain.vue";
