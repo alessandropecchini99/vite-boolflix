@@ -54,7 +54,7 @@ main {
   h3 {
     padding-top: 3em;
     padding-bottom: 0.5em;
-    margin-left: 1em;
+    margin-left: 2em;
     font-weight: 400;
   }
 
@@ -64,7 +64,7 @@ main {
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
-    padding-left: 1em;
+    padding-left: 2em;
   }
 
   .container::-webkit-scrollbar {
