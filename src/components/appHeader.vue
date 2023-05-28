@@ -70,6 +70,7 @@ header {
       .bordo {
         border: 2px rgb(195, 0, 0) solid;
         input {
+          width: 180px;
           outline: none;
           border: 0;
           padding: 5px;
